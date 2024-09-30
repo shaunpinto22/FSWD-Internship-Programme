@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>events</h1>
+    <button id="clickButton">click here</button>
+
+    <div id="hoverBox" class="hover-box">hover here</div>
+
+    <input type="text" id="keyInput" placeholder="type">
+    <div id="scrollBox" class="scroll-box">
+        <div class="scroll-content"></div>
+    </div>
+
+    <script>
+        document.getElementById('clickButton').addEventListener("click",function(){
+            alert("button was clicked");
+        })
+
+        document.getElementById("hoverBox").addEventListener("mouseover",function(){
+            this.style.backgroundColor="red";
+        })
+
+        document.getElementById("hoverBox").addEventListener("mouseout",function(){
+            this.style.backgroundColor="blue";
+        })
+
+        document.getElementById("scrollBox").addEventListener("scroll",function(){
+            console.log("you are scrolling");
+        })
+    </script>
+</body>
+</html>
