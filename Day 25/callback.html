@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function doHomeWork(subject,callback){
+            console.log(`doing work for ${subject}...`);
+            callback();
+        }
+        doHomeWork("Math",function(){
+            console.log("finished work"); // callback is a function that gets passed into another function as an argument.
+
+        }); // eg of callback: its like calling a friend and telling them to call you back when they have info.
+    </script>
+</body>
+</html>
