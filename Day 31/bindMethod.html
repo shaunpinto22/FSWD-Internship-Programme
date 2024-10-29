@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            name:"alex",
+            greet:function(age,city){
+                console.log(`hello, my name is ${this.name}, I am ${age} years old, from ${city}`);
+
+            }
+        };
+        const anotherPerson={name:"Shaun"};
+//using bind method we created new function with 'this' bound to 'anotherPerson'
+        const greetShaun=person.greet.bind(anotherPerson,25,"mumbai");
+        greetShaun();
+    </script>
+</body>
+</html>
